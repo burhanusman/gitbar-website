@@ -1,0 +1,25 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad)"/>
+
+  <!-- Menu Bar Icon Representation -->
+  <rect x="450" y="150" width="300" height="80" rx="10" fill="#2d2d2d" opacity="0.8"/>
+  <circle cx="490" cy="190" r="12" fill="#4ade80"/>
+  <rect x="520" y="178" width="200" height="24" rx="4" fill="#ededed" opacity="0.9"/>
+
+  <!-- Title -->
+  <text x="600" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="#ededed" text-anchor="middle">GitBar</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="32" fill="#a3a3a3" text-anchor="middle">GitHub Status in Your Menu Bar</text>
+
+  <!-- Bottom accent -->
+  <rect x="400" y="450" width="400" height="4" rx="2" fill="#4ade80"/>
+</svg>
