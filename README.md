@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GitBar Website
+
+Marketing website for [GitBar](https://github.com/burhanusman/gitbar) - an elegant macOS menu bar app for monitoring GitHub repositories.
+
+## Tech Stack
+
+- **Framework**: Next.js 16.1.2 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Analytics**: Vercel Analytics
+- **Deployment**: Vercel
+
+## Features
+
+- Dark mode only design
+- Single-page application
+- SEO optimized with Open Graph tags
+- Responsive design
+- Fast static generation
+- Integrated analytics
 
 ## Getting Started
 
-First, run the development server:
+### Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Create production build
+npm run build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Start production server
+npm start
+```
 
-## Learn More
+### Lint
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+gitbar-website/
+├── app/
+│   ├── layout.tsx      # Root layout with metadata & analytics
+│   ├── page.tsx        # Landing page
+│   ├── globals.css     # Global styles (dark mode)
+│   └── favicon.ico     # Favicon
+├── components/         # React components (empty for now)
+├── public/            # Static assets
+│   └── og-image.svg   # Social sharing image
+├── SETUP.md           # Setup documentation
+└── DEPLOY.md          # Deployment guide
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+See [DEPLOY.md](./DEPLOY.md) for detailed deployment instructions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Quick deploy:**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/burhanusman/gitbar-website)
+
+## Domain
+
+Recommended domain: **gitbar.app** (~$12/year from Namecheap)
+
+See [SETUP.md](./SETUP.md) for domain configuration instructions.
+
+## Contributing
+
+This is a simple marketing site. Contributions welcome for:
+- Design improvements
+- Content updates
+- Performance optimizations
+- Bug fixes
+
+## License
+
+MIT
+
+## Related
+
+- [GitBar](https://github.com/burhanusman/gitbar) - Main macOS app repository
