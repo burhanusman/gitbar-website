@@ -1,88 +1,148 @@
+import Image from 'next/image';
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center px-6">
-      <main className="flex flex-col items-center justify-center text-center max-w-4xl">
-        {/* Icon/Logo placeholder */}
-        <div className="mb-8 w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
-          <svg
-            className="w-12 h-12 text-white"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="flex min-h-screen items-center justify-center px-6 py-20">
+        <div className="flex flex-col items-center text-center max-w-4xl">
+          {/* App Icon */}
+          <div className="mb-8">
+            <Image
+              src="/app-icon.png"
+              alt="GitBar App Icon"
+              width={120}
+              height={120}
+              className="rounded-[26px]"
+              priority
             />
-          </svg>
-        </div>
+          </div>
 
-        {/* Main heading */}
-        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-          GitBar
-        </h1>
+          {/* Main heading */}
+          <h1 className="text-6xl sm:text-7xl font-bold mb-6 text-white">
+            GitBar
+          </h1>
 
-        {/* Subtitle */}
-        <p className="text-2xl text-gray-400 mb-4 max-w-2xl">
-          Elegant GitHub status in your macOS menu bar
-        </p>
+          {/* Tagline */}
+          <p className="text-xl sm:text-2xl text-gray-400 mb-12 max-w-2xl">
+            Git repository status at a glance. Lives in your menu bar.
+          </p>
 
-        {/* Description */}
-        <p className="text-lg text-gray-500 mb-12 max-w-xl">
-          Monitor your repositories with real-time status updates. Track branches, commits, and changes at a glance.
-        </p>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-16">
+          {/* Primary CTA */}
           <a
             href="https://github.com/burhanusman/gitbar/releases/latest"
-            className="px-8 py-4 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="px-8 py-4 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition-colors text-lg"
           >
             Download for macOS
           </a>
-          <a
-            href="https://github.com/burhanusman/gitbar"
-            className="px-8 py-4 border border-gray-700 text-white rounded-lg font-semibold hover:border-gray-500 hover:bg-gray-900 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View on GitHub
-          </a>
         </div>
+      </section>
 
-        {/* Features */}
-        <div className="grid md:grid-cols-3 gap-8 w-full max-w-3xl">
-          <div className="p-6 rounded-xl bg-gray-900/50 border border-gray-800">
-            <div className="text-3xl mb-3">⚡</div>
-            <h3 className="text-lg font-semibold mb-2 text-white">Fast & Lightweight</h3>
-            <p className="text-gray-400 text-sm">
-              Native macOS app with minimal resource usage
-            </p>
+      {/* Features Section */}
+      <section className="px-6 py-20 border-t border-gray-800">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Feature 1 */}
+            <div>
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-lg font-semibold mb-2 text-white">Native & Fast</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Built with Swift for macOS. Minimal resource usage, maximum performance.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div>
+              <div className="text-4xl mb-4">👁️</div>
+              <h3 className="text-lg font-semibold mb-2 text-white">Status at a Glance</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                See uncommitted changes, branch status, and sync state instantly from your menu bar.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div>
+              <div className="text-4xl mb-4">🔄</div>
+              <h3 className="text-lg font-semibold mb-2 text-white">Auto-Updates</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Integrated Sparkle framework keeps the app updated with the latest features and fixes.
+              </p>
+            </div>
+
+            {/* Feature 4 */}
+            <div>
+              <div className="text-4xl mb-4">🎨</div>
+              <h3 className="text-lg font-semibold mb-2 text-white">Minimal UI</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Clean, distraction-free interface. No clutter, just the information you need.
+              </p>
+            </div>
           </div>
-          <div className="p-6 rounded-xl bg-gray-900/50 border border-gray-800">
-            <div className="text-3xl mb-3">🔔</div>
-            <h3 className="text-lg font-semibold mb-2 text-white">Real-time Updates</h3>
-            <p className="text-gray-400 text-sm">
-              Stay in sync with automatic status checks
-            </p>
-          </div>
-          <div className="p-6 rounded-xl bg-gray-900/50 border border-gray-800">
-            <div className="text-3xl mb-3">🎨</div>
-            <h3 className="text-lg font-semibold mb-2 text-white">Beautiful Design</h3>
-            <p className="text-gray-400 text-sm">
-              Clean interface that fits perfectly in your menu bar
+        </div>
+      </section>
+
+      {/* Screenshot/Demo Section */}
+      <section className="px-6 py-20 border-t border-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            Simple. Powerful. Elegant.
+          </h2>
+          <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+            GitBar lives in your menu bar, providing instant visibility into your repository status without disrupting your workflow.
+          </p>
+
+          {/* Placeholder for screenshot - will be added later */}
+          <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-700 flex items-center justify-center">
+            <p className="text-gray-500 text-sm">
+              Screenshot coming soon
             </p>
           </div>
         </div>
+      </section>
 
-        {/* Footer */}
-        <footer className="mt-20 text-sm text-gray-600">
-          <p>
-            Open source on{" "}
+      {/* Installation Section */}
+      <section className="px-6 py-20 border-t border-gray-800">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+            Installation
+          </h2>
+
+          {/* Homebrew */}
+          <div className="mb-12">
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Homebrew
+            </h3>
+            <div className="bg-black/50 border border-gray-800 rounded-lg p-4 font-mono text-sm">
+              <code className="text-gray-300">
+                brew install --cask gitbar
+              </code>
+            </div>
+          </div>
+
+          {/* DMG Download */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Direct Download
+            </h3>
+            <p className="text-gray-400 text-sm mb-4">
+              Download the DMG, drag GitBar to Applications, and launch.
+            </p>
+            <a
+              href="https://github.com/burhanusman/gitbar/releases/latest"
+              className="inline-block px-6 py-3 border border-gray-700 text-white rounded-lg font-semibold hover:border-gray-500 hover:bg-gray-900 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download DMG
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="px-6 py-12 border-t border-gray-800">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div className="flex gap-6 text-sm">
             <a
               href="https://github.com/burhanusman/gitbar"
               className="text-gray-400 hover:text-white transition-colors"
@@ -91,9 +151,20 @@ export default function Home() {
             >
               GitHub
             </a>
-          </p>
-        </footer>
-      </main>
+            <a
+              href="https://twitter.com/burhanusman"
+              className="text-gray-400 hover:text-white transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter/X
+            </a>
+          </div>
+          <div className="text-sm text-gray-600">
+            v1.0.0
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
