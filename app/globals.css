@@ -4,17 +4,17 @@
   --background: #050507;
   --foreground: #ededed;
 
-  /* Accent gradient colors */
-  --accent-purple: #664DCC;
+  /* Accent gradient colors - Unified Blue Theme */
+  --accent-purple: #3366E6; /* Remapped to blue for consistency */
   --accent-blue: #3366E6;
 
   /* Glass effect */
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-border-hover: rgba(255, 255, 255, 0.15);
+  --glass-bg: rgba(51, 102, 230, 0.05); /* Blue tinted glass */
+  --glass-border: rgba(51, 102, 230, 0.1);
+  --glass-border-hover: rgba(51, 102, 230, 0.25);
 
   /* Glow colors */
-  --glow-purple: rgba(102, 77, 204, 0.4);
+  --glow-purple: rgba(51, 102, 230, 0.4); /* Remapped to blue */
   --glow-blue: rgba(51, 102, 230, 0.4);
 }
 

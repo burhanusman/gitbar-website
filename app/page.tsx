@@ -1,27 +1,19 @@
 import {
   Navigation,
   Hero,
-  AIIntegration,
-  ProductDemo,
-  FeatureGrid,
-  Installation,
-  SocialProof,
   Footer,
 } from '@/components';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
-      <Navigation />
-      <main>
+    <div className="h-screen w-full overflow-hidden bg-[#0a0a0a]">
+      <div className='absolute top-0 left-0 w-full z-50'>
+        <Navigation />
+      </div>
+      <main className="h-full w-full">
         <Hero />
-        <AIIntegration />
-        <ProductDemo />
-        <FeatureGrid />
-        <Installation />
-        <SocialProof />
       </main>
-      <Footer />
+      {/* Footer hidden or integrated since user wants non-scrollable one-page vibe */}
     </div>
   );
 }
