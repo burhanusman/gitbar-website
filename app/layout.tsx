@@ -11,11 +11,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gitbar.app"),
-  title: "GitBar - Git repository status at a glance",
-  description: "Git repository status at a glance. Lives in your menu bar. Native macOS app built with Swift.",
+  title: "GitBar - Your repos. Your AI projects. One glance.",
+  description: "GitBar lives in your menu bar, auto-discovering Claude Code and Codex projects so you never lose track of AI-generated changes. Native macOS app built with Swift.",
+  keywords: ["git", "menu bar", "macOS", "Claude Code", "Codex", "AI", "developer tools", "repository", "Swift"],
+  authors: [{ name: "Burhan Usman" }],
   openGraph: {
-    title: "GitBar - Git repository status at a glance",
-    description: "Git repository status at a glance. Lives in your menu bar.",
+    title: "GitBar - Your repos. Your AI projects. One glance.",
+    description: "GitBar lives in your menu bar, auto-discovering Claude Code and Codex projects so you never lose track of AI-generated changes.",
     url: "https://gitbar.app",
     siteName: "GitBar",
     images: [
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "GitBar - Git status in your menu bar",
+        alt: "GitBar - Git status in your menu bar with AI project detection",
       },
     ],
     locale: "en_US",
@@ -31,9 +33,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GitBar - Git repository status at a glance",
-    description: "Git repository status at a glance. Lives in your menu bar.",
+    title: "GitBar - Your repos. Your AI projects. One glance.",
+    description: "GitBar lives in your menu bar, auto-discovering Claude Code and Codex projects so you never lose track of AI-generated changes.",
     images: ["/og-image.png"],
+    creator: "@burhanusman",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -43,9 +50,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${inter.variable} antialiased bg-[#050507] text-white`}
       >
         {children}
         <Analytics />
