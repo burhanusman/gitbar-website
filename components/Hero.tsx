@@ -4,7 +4,12 @@ import { ArrowRight, Copy, Check, Terminal } from 'lucide-react';
 import FabricGraphic from '@/components/FabricGraphic';
 import { useState } from 'react';
 
-export function Hero() {
+interface HeroProps {
+  version: string;
+  dmgUrl: string;
+}
+
+export function Hero({ version, dmgUrl }: HeroProps) {
   const [copied, setCopied] = useState(false);
   const installCommand = 'brew install --cask burhanusman/gitbar/gitbar';
 
@@ -39,7 +44,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-3 px-4 py-2 border border-[#00f5d4]/30 bg-[#00f5d4]/5">
             <span className="w-2 h-2 bg-[#00f5d4] animate-pulse" />
             <span className="font-[family-name:var(--font-mono)] text-xs tracking-[0.3em] text-[#00f5d4] uppercase">
-              v1.0.1 — Free & Open Source
+              {version} — Free & Open Source
             </span>
           </div>
         </div>
@@ -92,7 +97,8 @@ export function Hero() {
         {/* CTAs */}
         <div className="opacity-0 animate-fade-up delay-400 flex flex-col sm:flex-row gap-4">
           <a
-            href="https://github.com/burhanusman/gitbar/releases/latest"
+            href={dmgUrl}
+            download
             className="btn-retro-solid px-8 py-4 inline-flex items-center justify-center gap-3"
           >
             <Terminal className="w-4 h-4" />
