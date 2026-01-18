@@ -107,11 +107,12 @@ body {
     0 0 40px var(--accent-primary-dim);
 }
 
-/* Subtle neon glow - reduced intensity */
+/* Subtle neon glow - visible but not overpowering */
 .neon-text-subtle {
   text-shadow:
-    0 0 8px rgba(0, 245, 212, 0.4),
-    0 0 16px rgba(0, 245, 212, 0.2);
+    0 0 10px rgba(0, 245, 212, 0.5),
+    0 0 20px rgba(0, 245, 212, 0.3),
+    0 0 40px rgba(0, 245, 212, 0.15);
 }
 
 .neon-text-amber {
