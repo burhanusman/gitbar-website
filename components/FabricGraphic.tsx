@@ -12,7 +12,7 @@ const NoiseBlob = () => {
   const uniforms = useMemo(
     () => ({
       uTime: { value: 0 },
-      uColor: { value: new THREE.Color("#3366E6") }, // Blue theme color
+      uColor: { value: new THREE.Color("#00f5d4") }, // Retro cyan
     }),
     []
   );
