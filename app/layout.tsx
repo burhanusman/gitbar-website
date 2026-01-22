@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono, Orbitron } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -25,7 +26,7 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gitbar.app"),
+  metadataBase: new URL("https://gitbar.dev"),
   title: "GitBar - Your repos. Your AI projects. One glance.",
   description: "GitBar lives in your menu bar, auto-discovering Claude Code and Codex projects so you never lose track of AI-generated changes. Native macOS app built with Swift.",
   keywords: ["git", "menu bar", "macOS", "Claude Code", "Codex", "AI", "developer tools", "repository", "Swift"],
@@ -33,16 +34,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "GitBar - Your repos. Your AI projects. One glance.",
     description: "GitBar lives in your menu bar, auto-discovering Claude Code and Codex projects so you never lose track of AI-generated changes.",
-    url: "https://gitbar.app",
+    url: "https://gitbar.dev",
     siteName: "GitBar",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "GitBar - Git status in your menu bar with AI project detection",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -50,8 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "GitBar - Your repos. Your AI projects. One glance.",
     description: "GitBar lives in your menu bar, auto-discovering Claude Code and Codex projects so you never lose track of AI-generated changes.",
-    images: ["/og-image.png"],
-    creator: "@burhanusman",
+    creator: "@BurhanUsman",
   },
   robots: {
     index: true,
@@ -71,6 +63,7 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
