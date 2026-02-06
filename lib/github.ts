@@ -18,7 +18,7 @@ export async function getLatestRelease(): Promise<GitHubRelease> {
         headers: {
           Accept: 'application/vnd.github.v3+json',
         },
-        next: { revalidate: 3600 }, // Revalidate every hour
+        next: { revalidate: 300 }, // Revalidate every 5 minutes
       }
     );
 
