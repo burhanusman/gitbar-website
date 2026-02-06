@@ -3,6 +3,7 @@
 import { ArrowRight, Copy, Check, Terminal } from 'lucide-react';
 import FabricGraphic from '@/components/FabricGraphic';
 import { useState } from 'react';
+import { track } from '@vercel/analytics';
 
 interface HeroProps {
   version: string;
@@ -17,6 +18,15 @@ export function Hero({ version, dmgUrl }: HeroProps) {
     navigator.clipboard.writeText(installCommand);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+    track('brew_command_copied');
+  };
+
+  const handleDmgDownload = () => {
+    track('dmg_download', { version });
+  };
+
+  const handleGitHubClick = () => {
+    track('github_repo_click');
   };
 
   return (
@@ -93,6 +103,7 @@ export function Hero({ version, dmgUrl }: HeroProps) {
           <a
             href={dmgUrl}
             download
+            onClick={handleDmgDownload}
             className="btn-retro-solid px-6 sm:px-8 py-3.5 sm:py-4 inline-flex items-center justify-center gap-3 text-sm sm:text-base"
           >
             <Terminal className="w-4 h-4" />
@@ -101,6 +112,7 @@ export function Hero({ version, dmgUrl }: HeroProps) {
 
           <a
             href="https://github.com/burhanusman/gitbar"
+            onClick={handleGitHubClick}
             className="btn-retro px-6 sm:px-8 py-3.5 sm:py-4 inline-flex items-center justify-center gap-3 group text-sm sm:text-base"
           >
             <span>View on GitHub</span>
